@@ -23,3 +23,9 @@ end
 function update_vars --on-event fish_postexec
     set -g prompt_dir_size (math floor (tput cols)/20)
 end
+
+if command -q nix-your-shell
+  nix-your-shell fish | source
+end
+
+starship init fish | source

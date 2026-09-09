@@ -1,0 +1,31 @@
+format = """
+[](fg:#313244)$directory[](fg:#313244 bg:#45475a)$git_branch$git_status[](fg:#45475a bg:#313244)$package$rust[](fg:#313244 bg:#45475a)$nix_shell[ ](fg:#45475a)
+"""
+
+[directory]
+format = "[ $path ]($style)"
+style = "bold fg:#74c7ec bg:#313244"
+
+[git_branch]
+format = "[ $symbol$branch]($style)"
+style = "bold fg:#a6e3a1 bg:#45475a"
+
+[git_status]
+format = "[ $all_status$ahead_behind ]($style)"
+style = "bold fg:#f9e2af bg:#45475a"
+
+[package]
+format = "[ $symbol$version ]($style)"
+style = "bold fg:#cba6f7 bg:#313244"
+
+[rust]
+format = "[ $symbol$version ]($style)"
+style = "bold fg:#cba6f7 bg:#313244"
+
+[nix_shell]
+symbol = " "
+format = "[ $symbol$name ]($style)"
+style = "bold fg:#89b4fa bg:#45475a"
+
+[character]
+disabled = true
