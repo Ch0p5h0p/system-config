@@ -6,7 +6,7 @@ output "eDP-1" {
 }
 
 input {
-    focus-follows-mouse
+    focus-follows-mouse max-scroll-amount="0%"
 
     keyboard {
         xkb {
@@ -26,5 +26,5 @@ gestures {
 
 cursor {
     xcursor-theme "Adwaita"
-    xcursor-size 24
+    //xcursor-size 24
 }

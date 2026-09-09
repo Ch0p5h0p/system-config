@@ -22,7 +22,7 @@ binds {
     }
 
     Mod+E {
-        spawn-sh "alacritty -e nvim"
+        spawn-sh "kitty -- nvim"
     }
 
     Mod+Shift+E {
@@ -69,11 +69,7 @@ binds {
         spawn-sh "noctalia msg panel-toggle noctalia/notes:panel"
     }
 
-    Mod+A {
-        spawn-sh "kitty -- todo read main"
-    }
-
-    Mod+Left {
+    /*Mod+Left {
         focus-column-left
     }
 
@@ -87,7 +83,7 @@ binds {
 
     Mod+Down {
         focus-window-down
-    }
+    }*/
 
     Mod+H {
         focus-column-left
@@ -105,7 +101,7 @@ binds {
         focus-workspace-up
     }
 
-    Mod+Shift+Left {
+    /*Mod+Shift+Left {
         move-column-left
     }
 
@@ -119,7 +115,7 @@ binds {
 
     Mod+Shift+Down {
         move-window-down
-    }
+    }*/
 
     Mod+Shift+H {
         move-column-left
