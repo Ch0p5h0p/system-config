@@ -16,6 +16,17 @@ window-rule {
     open-focused false
 }
 
+window-rule {
+    match app-id="kitty"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
 blur {
-    passes 1
+    passes 2
+    offset 2.0
+    noise 0.0
+    saturation 1.0
 }
