@@ -4,9 +4,6 @@
 [submodule "flakes/lexaloffle-nix-flake"]
 	path = flakes/lexaloffle-nix-flake
 	url = https://github.com/Ch0p5h0p/lexaloffle-nix-flake
-[submodule "config/nvim-config"]
-	path = config/nvim-config
-	url = https://github.com/Ch0p5h0p/nvim-config
 [submodule "config/nvim"]
 	path = config/nvim
 	url = https://github.com/Ch0p5h0p/nvim-config
