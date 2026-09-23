@@ -1,6 +1,3 @@
-[submodule "nixos-config"]
-	path = nixos-config
-	url = https://github.com/Ch0p5h0p/nixos-config
 [submodule "flakes/lexaloffle-nix-flake"]
 	path = flakes/lexaloffle-nix-flake
 	url = https://github.com/Ch0p5h0p/lexaloffle-nix-flake
