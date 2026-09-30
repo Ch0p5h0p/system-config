@@ -6,7 +6,7 @@ layer-rule {
 }
 
 window-rule {
-    geometry-corner-radius 10
+    geometry-corner-radius 0 //10
     clip-to-geometry true
 }
 
@@ -25,8 +25,8 @@ window-rule {
 }
 
 blur {
-    passes 2
-    offset 2.0
+    passes 4
+    offset 1
     noise 0.0
     saturation 1.0
 }

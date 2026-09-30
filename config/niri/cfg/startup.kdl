@@ -17,10 +17,22 @@ hotkey-overlay {
     skip-at-startup
 }
 
-spawn-sh-at-startup "noctalia &"
+// BACKUP
+/*spawn-sh-at-startup "noctalia &"
 spawn-sh-at-startup "kitty --detach --title 'kitty-daemon' --single-instance sh -c 'exit'"
-spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-sh-at-startup "nm-applet &"
 spawn-sh-at-startup "gsr-ui launch-hide"
 spawn-sh-at-startup "vesktop --start-minimized"
-spawn-sh-at-startup "steam -silent"
+
+spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+spawn-at-startup "gnome-keyring-daemon --start --components=secrets"*/
+// spawn-sh-at-startup "steam -silent"
+
+spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+spawn-at-startup "gnome-keyring-daemon --start --components=secrets"
+spawn-at-startup "noctalia"
+spawn-at-startup "kitty --detach --title 'kitty-daemon' --single-instance sh -c 'exit'"
+spawn-at-startup "nm-applet"
+spawn-at-startup "gsr-ui launch-hide"
+spawn-at-startup "vesktop --start-minimized"
+spawn-at-startup "steam -silent"

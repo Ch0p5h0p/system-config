@@ -57,6 +57,18 @@ binds {
         spawn-sh "noctalia msg screenshot-fullscreen"
     }
 
+    /*Alt+Z {
+        spawn-sh "gsr-ui-cli toggle-show"
+    }*/
+    
+    Alt+F9 {
+        spawn-sh "gsr-ui-cli toggle-record"
+    }
+
+    Alt+Shift+F9 {
+        spawn-sh "gsr-ui-cli toggle-record-window"
+    }
+
     Mod+Space {
         spawn-sh "noctalia msg screenshot-region"
     }
