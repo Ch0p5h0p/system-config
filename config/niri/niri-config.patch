@@ -1,0 +1,54 @@
+```diff
+diff -r /home/radar77/.config/niri/cfg/binds.kdl niri/cfg/binds.kdl
+--- /home/radar77/.config/niri/cfg/binds.kdl
++++ niri/cfg/binds.kdl
+@@ -7,4 +7,0 @@
+-    
+-    Mod+Shift+T {
+-        spawn-sh "kitty -1 -- zellij"
+-    }
+@@ -44,4 +40,0 @@
+-    Mod+Shift+R {
+-        spawn-sh "noctalia msg panel-toggle launcher"
+-    }
+-
+@@ -49 +41 @@
+-        spawn "kitty" "--class" "otter-launcher" "otter-launcher"
++        spawn-sh "noctalia msg panel-toggle launcher"
+@@ -291,4 +283,0 @@
+-    }
+-
+-    Mod+Shift+Slash {
+-        show-hotkey-overlay
+
+diff -r /home/radar77/.config/niri/cfg/layout.kdl niri/cfg/layout.kdl
+--- /home/radar77/.config/niri/cfg/layout.kdl
++++ niri/cfg/layout.kdl
+@@ -8 +8 @@
+-        off
++        on
+
+diff -r /home/radar77/.config/niri/cfg/rules.kdl niri/cfg/rules.kdl
+--- /home/radar77/.config/niri/cfg/rules.kdl
++++ niri/cfg/rules.kdl
+@@ -27,13 +27,0 @@
+-window-rule {
+-    match app-id="otter-launcher"
+-    open-floating true
+-
+-    default-column-width { proportion 0.5; }
+-    default-window-height { proportion 0.5; }
+-
+-    background-effect {
+-        blur true
+-        xray false
+-    }
+-}
+
+diff -r /home/radar77/.config/niri/cfg/startup.kdl niri/cfg/startup.kdl
+--- /home/radar77/.config/niri/cfg/startup.kdl
++++ niri/cfg/startup.kdl
+@@ -36 +36 @@
+-spawn-sh-at-startup "gsr-ui launch-hide"
++spawn-at-startup "gsr-ui launch-hide"
+```

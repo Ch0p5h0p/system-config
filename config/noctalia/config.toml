@@ -1,7 +1,7 @@
 # Use docs.noctalia.dev for guides
 
 [shell]
-font_family = "Space Mono"
+font_family = "SpaceMono Nerd Font"
 
 [shell.launcher]
 sort_by_usage = true
@@ -18,7 +18,13 @@ layer = "top"
 thickness = 38
 border_width = 3.0
 scale = 1.2
-margin_ends = 10
+margin_ends = 0 #10
+
+radius_top_left = 0
+radius_top_right = 0
+radius_bottom_left = 0
+radius_bottom_right = 0
+concave_edge_corners = false
 
 widget_spacing = 8
 # font_family = "Space Mono"

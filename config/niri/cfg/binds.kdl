@@ -5,6 +5,10 @@ binds {
         spawn-sh "kitty -1"
     }
 
+    Mod+Shift+T {
+        spawn-sh "kitty -1 -- zellij"
+    }
+
     Mod+Q {
         close-window
     }
@@ -38,7 +42,7 @@ binds {
     }
 
     Mod+R {
-        spawn-sh "noctalia msg panel-toggle launcher"
+        spawn "kitty" "--class" "otter-launcher" "otter-launcher"
     }
 
     Mod+F {

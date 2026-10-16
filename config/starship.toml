@@ -1,27 +1,66 @@
 format = """
-[](fg:#313244)$directory[](fg:#313244 bg:#45475a)$git_branch$git_status[](fg:#45475a bg:#313244)$package$rust[](fg:#313244 bg:#45475a)$nix_shell[ ](fg:#45475a)
+ [](fg:#313244)$directory[](fg:#313244 bg:#3b3d4f)$git_branch$git_status[](fg:#3b3d4f bg:#45475a)$package$rust$cmake$c$cpp$gradle$java$python[](fg:#45475a) 
 """
+
+# had this on the end $nix_shell[ ](fg:#45475a)
 
 [directory]
 format = "[ $path ]($style)"
 style = "bold fg:#74c7ec bg:#313244"
 
+# Git
 [git_branch]
 format = "[ $symbol$branch]($style)"
-style = "bold fg:#a6e3a1 bg:#45475a"
+style = "bold fg:#a6e3a1 bg:#3b3d4f"
 
 [git_status]
 format = "[ $all_status$ahead_behind ]($style)"
-style = "bold fg:#f9e2af bg:#45475a"
+style = "bold fg:#f9e2af bg:#3b3d4f"
 
+# Packaging and build stuff
 [package]
+symbol = "󰏖 "
 format = "[ $symbol$version ]($style)"
-style = "bold fg:#cba6f7 bg:#313244"
+style = "bold fg:#cba6f7 bg:#45475a"
 
+[gradle]
+symbol = " "
+format = "[ $symbol$version ]($style)"
+style = "bold fg:#a6e3a1 bg:#45475a" 
+
+[cmake]
+symbol = " "
+format = "[ $symbol$version ]($style)"
+style = "bold fg:#f38ba8 bg:#45475a"
+
+# Languages
 [rust]
+symbol = "󱘗 "
 format = "[ $symbol$version ]($style)"
-style = "bold fg:#cba6f7 bg:#313244"
+style = "bold fg:#fab387 bg:#45475a"
 
+[c]
+symbol = " "
+format = "[ $symbol$name $version ]($style)"
+style = "bold fg:#89b4fa bg:#45475a"
+
+[cpp]
+symbol = " "
+format = "[ $symbol$name $version ]($style)"
+style = "bold fg:#89b4fa bg:#45475a"
+
+[java]
+symbol = " "
+format = "[ $symbol$version ]($style)"
+style = "bold fg:#fab387 bg:#45475a" 
+
+[python]
+symbol = " "
+format = "[ $symbol$version ]($style)"
+style = "bold fg:#f9e2af bg:#45475a"
+python_binary = ['python', 'python3']
+
+# Shell
 [nix_shell]
 symbol = " "
 format = "[ $symbol$name ]($style)"
