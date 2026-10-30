@@ -41,8 +41,12 @@ binds {
         spawn "dolphin"
     }
 
-    Mod+R {
+    Mod+Shift+R {
         spawn "kitty" "--class" "otter-launcher" "otter-launcher"
+    }
+
+    Mod+R {
+        spawn-sh "noctalia msg panel-toggle launcher"
     }
 
     Mod+F {
@@ -51,6 +55,10 @@ binds {
 
     Mod+Shift+F {
         fullscreen-window
+    }
+
+    Mod+Alt+F {
+        toggle-window-floating
     }
 
     Mod+Shift+W {
@@ -81,8 +89,16 @@ binds {
         spawn-sh "noctalia msg panel-toggle control-center"
     }
 
+    Mod+Shift+C {
+        spawn-sh "noctalia msg panel-toggle control-center media"
+    }
+
     Mod+N {
-        spawn-sh "noctalia msg panel-toggle noctalia/notes:panel"
+        spawn-sh "noctalia msg panel-toggle control-center notifications"
+    }
+
+    Mod+Shift+N {
+        spawn-sh "noctalia msg notification-dnd-toggle"
     }
 
     /*Mod+Left {

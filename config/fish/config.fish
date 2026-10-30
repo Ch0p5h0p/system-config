@@ -2,12 +2,21 @@ set -U fish_greeting
 set -g prompt_dir_size (math floor (tput cols)/6)
 set -g fish_key_bindings fish_vi_key_bindings
 
+set -g DEVKITPRO /opt/devkitpro
+set -g DEVKITARM /opt/devkitpro/devkitARM
+set -g DEVKITPPC /opt/devkitpro/devkitPPC
+
 fish_add_path -a /home/radar77/.cargo/bin
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
     bind \t accept-autosuggestion
     alias "nvchad"="NVIM_APPNAME=nvchad nvim"
+    alias "deref"='cd $(realpath .)'
+
+    export DEVKITPRO=$(echo $DEVKITPRO)
+    export DEVKITARM=$(echo $DEVKITARM)
+    export DEVKITPPC=$(echo $DEVKITPPC)
 end
 
 function fish_title
@@ -30,6 +39,13 @@ if command -q nix-your-shell
   nix-your-shell fish | source
 end
 
+function sf
+    set -l loc (fd . -H --exclude .git | fzf --query="$argv")
+    test -f "$loc"; and $EDITOR "$loc"
+    test -d "$loc"; and cd "$loc"
+    #and cd "$dir"
+end
+
 starship init fish | source
 
 
@@ -42,3 +58,4 @@ test -r '/home/radar77/.opam/opam-init/init.fish' && source '/home/radar77/.opam
 # END opam configuration
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/radar77/.ghcup/bin $PATH # ghcup-env
+set -gx PATH $(go env GOPATH)/bin $PATH ; 
