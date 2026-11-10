@@ -26,3 +26,4 @@ My configurations for my system
 |![original-empty](past-rice/rice-original-blank.png) | ![original-populated](past-rice/rice-original-populated.png)|
 |![7-11-2026-empty](past-rice/rice-7-11-2026-blank.png) | ![7-11-2026-populated](past-rice/rice-7-11-2026-populated.png)|
 |![8-30-2026-empty](past-rice/rice-8-30-2026-blank.png) | ![8-30-2026-populated](past-rice/rice-8-30-2026-populated.png)|
+|![11-10-2026-empty](past-rice/rice-11-10-2026-blank.png) | ![11-10-2026-populated](./past-rice/rice-11-10-2026-populated.png)|

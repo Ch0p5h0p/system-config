@@ -1,6 +1,6 @@
 [plugins]
 # Fully-qualified ids ("<author>/<plugin>") that are active.
-enabled = ["radimous/prismlauncher-instances", "cleboost/zed-provider", "noctalia/notes", "yocraft/battery-widget", "yugaaank/better-clock", "piero-93/battery-power-management"]
+enabled = ["radimous/prismlauncher-instances", "cleboost/zed-provider", "noctalia/notes", "yocraft/battery-widget", "yugaaank/better-clock", "piero-93/battery-power-management", "cero800/arch-audit"]
 auto_update = "all"
 
 [[plugins.source]]

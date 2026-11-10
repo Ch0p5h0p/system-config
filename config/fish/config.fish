@@ -12,7 +12,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     bind \t accept-autosuggestion
     alias "nvchad"="NVIM_APPNAME=nvchad nvim"
+    alias "snacks"="NVIM_APPNAME=snacks-nvim nvim"
     alias "deref"='cd $(realpath .)'
+    alias "e"='$EDITOR'
 
     export DEVKITPRO=$(echo $DEVKITPRO)
     export DEVKITARM=$(echo $DEVKITARM)
@@ -40,10 +42,26 @@ if command -q nix-your-shell
 end
 
 function sf
-    set -l loc (fd . -H --exclude .git | fzf --query="$argv")
+    argparse 'q/query=' -- $argv
+    or return
+
+    set -l path .
+    set -l query ""
+
+    if test (count $argv) -gt 0
+        set path $argv[1]
+    end
+    
+    # fish creates _flag_X from argparse. since our long form flag
+    # is called query, the variable is _flag_query
+    if set -q _flag_query
+        set query $_flag_query
+    end
+
+    set -l loc (fd . -H --exclude .git "$path" | fzf --query="$query")
+
     test -f "$loc"; and $EDITOR "$loc"
     test -d "$loc"; and cd "$loc"
-    #and cd "$dir"
 end
 
 starship init fish | source

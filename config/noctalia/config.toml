@@ -30,13 +30,16 @@ widget_spacing = 8
 # font_family = "Space Mono"
 
 # default start  = ["launcher", "wallpaper", "workspaces"]
-start = ["workspaces", "spacer", "media"]
+start = ["workspaces", "spacer", "media"] # "cero800/arch-audit:widget"
 
 # default center = ["clock"]
 center = ["clock"]
 
 # default end    = ["media", "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "control-center", "session"]
 end = ["notifications", "spacer", "network", "volume", "bluetooth", "battery", "tray", "session"]
+
+[widget.tray]
+drawer = true
 
 [widget.network]
 show_label = false
