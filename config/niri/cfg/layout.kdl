@@ -1,11 +1,11 @@
-// Layour and desktop config
+// Layout and desktop config
 
 layout {
     background-color "transparent"
     gaps 20
 
     shadow {
-        on
+        off
         softness 4
         spread 0
         color "#1a1a1aee"
@@ -16,8 +16,10 @@ layout {
     focus-ring {
         width 2
 
-        active-gradient from="#b4befe" to="#eff1f5" angle=45
-        inactive-color "#585b70"
+        //active-gradient from="#b4befe" to="#eff1f5" angle=45
+        //inactive-color "#585b70"
+        active-gradient from="#dfb991" to="#e8dccb" angle=45
+        inactive-color "#3b2c22"
     }
 
 }

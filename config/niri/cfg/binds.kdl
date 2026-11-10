@@ -9,6 +9,10 @@ binds {
         spawn-sh "kitty -1 -- zellij"
     }
 
+    Mod+S {
+        spawn-sh "kitten quick-access-terminal"
+    }
+
     Mod+Q {
         close-window
     }
@@ -300,5 +304,9 @@ binds {
 
     XF86AudioPrev allow-when-locked=true {
         spawn "playerctl" "previous"
+    }
+
+    Mod+P {
+        spawn-sh "noctalia msg media toggle"
     }
 }
